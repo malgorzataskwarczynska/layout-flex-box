@@ -6,68 +6,72 @@
 }
 
 /* BODY */
-
+body {
+    display:flex;
+    flex-wrap: wrap;
+}
 
 /* HEADER */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: red;
+    flex-basis:100%;
 }
 
 /* SECTIONS */
 
-section {
-    display: flex;
-    flex-direction: row;
-    align-content: stretch;
-}
-
 .left {
-    width: 25%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: green;
+    flex-basis:25%;
 }
 
 .middle {
-    width: 50%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: blue   ;
+    background-color: blue;
+    flex-basis:50%;
 }
 
 .right {
-    width: 25%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: pink;
+    flex-basis:25%;
 }
 
 /* FOOTER */
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:rgb(133, 21, 185)
+    background-color:rgb(133, 21, 185);
+    flex-basis:100%;
 }
 
 /* LAYOUT */
 @media screen and (max-width: 992px) {
-    
+    .middle {
+    flex-basis:75%;
+    }
+    .right {
+    flex-basis:25%;
+    }
+    .left {
+    flex-basis:100%;
+    }
+    body {
+        nth-child(2) {
+        order:4;
+        }
+        nth-child(3) {
+        order:2;
+        }
+        nth-child(4) {
+        order:3;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
-
+.middle {
+    flex-basis:100%;
 }
-
-@media screen and (max-width: 480px) {
-
+.right {
+    flex-basis:100%;
+}
+.left {
+    flex-basis:100%;
+}
 }
