@@ -50,28 +50,23 @@ footer {
     }
     .left {
     flex-basis:100%;
+    order:1;
     }
-    body {
-        .left {
+
+    footer {
         order:1;
-        }
-        footer {
-        order:1;
-        }
-        .right {
-        order:1;
-        }
     }
 }
 
 @media screen and (max-width: 768px) {
-.middle {
+    .middle {
     flex-basis:100%;
-}
-.right {
+    }
+    .right {
     flex-basis:100%;
-}
-.left {
+    }
+    .left {
     flex-basis:100%;
-}
+    order:0;
+    }
 }
